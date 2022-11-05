@@ -20,7 +20,7 @@ app.use('/weather-data', limiter, (req, res, next) => {
     target: `${process.env.BASE_API_WEATHERAPI}${city}&aqi=no`,
     changeOrigin: true,
     pathRewrite: {
-      [`^/weather-data`]: '',
+      [`^"/weather-data`]: '',
     },
   })(req, res, next);
 });
